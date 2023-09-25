@@ -1,3 +1,7 @@
+'''
+새로 들어온 문자열, 제거되는 문자열만 반영하여 확인하는 것이 핵심 !!!
+'''
+
 checkList = [0]*4    # A, C, G, T 의 최소 개수가 들어있는 체크리스트 
 myList = [0]*4       # 슬라이딩  윈도우(부분 문자열)에 들어있는 A, C, G, T  갯수
 checkSecret = 0      # 각 문자가 충족될 때 증가되는 변수 (최대 4)
@@ -55,9 +59,10 @@ for i in range(P):              # 초기 P 부분 문자열 처리 부분
 if checkSecret == 4:            # 네 문자열 개수가 모두 충족되었을 때
     Result += 1                 # 정답 개수에 1 증가
     
+
 for i in range(P,S):            # for i in range(2,4) -> 맨 끝 인덱스가 마지막에 도달했을 때 까지 반복문
     j = i - P                   # 0 = 2-2   
-    myadd(A[i])                 # myadd(A[2])
+    myadd(A[i])                 # myadd(A[2]) 
     myremove(A[j])              # myremove(A[0])
     if checkSecret == 4:
         Result += 1
