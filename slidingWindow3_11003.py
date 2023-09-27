@@ -11,6 +11,7 @@ for i in range(N):
     mydeque.append((now[i],i))                  # 현재 데이터 값과 인덱스 덱에 추가
     if mydeque[0][1] <= i - L :                 # /// [0][1] ==> 맨 왼쪽 인덱스 의미 
         mydeque.popleft()                       # 왼쪽 제거
-    print(mydeque[0][0], end='')
+    print(mydeque[0][0], end=' ')
+
 
 
